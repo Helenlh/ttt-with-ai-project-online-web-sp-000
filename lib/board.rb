@@ -16,11 +16,24 @@ class Board
   [6, 4, 2]
   ] 
     
-    def initialize(cells)
-      #@board = board || Array.new(9, " ")
-        @cells = cells 
+    def initialize
+        @cells = cells || Array.new(9, " ")
     end     
    
-    def reset 
-    end 
+    def reset!
+      cells = Array.new(9, " ")
+
+      puts " #{@cells[0]} | #{@cells[1]} | #{@cells[2]} "
+      puts "-----------"
+      puts " #{@cells[3]} | #{@cells[4]} | #{@cells[5]} "
+      puts "-----------"
+      puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
+    end
+
+    def display 
+      puts " #{@cells[0]} | #{@cells[1]} | #{@cells[2]} "
+      puts "-----------"
+      puts " #{@cells[3]} | #{@cells[4]} | #{@cells[5]} "
+      puts "-----------"
+      puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
 end 
