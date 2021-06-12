@@ -1,10 +1,26 @@
-#require pry 
+#require 'spec helper'
+require 'pry'
 
-class Board 
-    attr. accessor :cells 
 
-def initialize (cells) 
-    @cells = cells 
-
-end 
+class Board   
+    attr_accessor :cells 
+    
+  WIN_COMBINATIONS = [  
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8], 
+  [0, 4, 8],
+  [6, 4, 2]
+  ] 
+    
+    def initialize(cells)
+      #@board = board || Array.new(9, " ")
+        @cells = cells 
+    end     
+   
+    def reset 
+    end 
 end 
