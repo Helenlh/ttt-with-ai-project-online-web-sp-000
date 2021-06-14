@@ -1,20 +1,27 @@
-#require 'spec helper'
+require 'bundler'
+Bundler.require
+
+require_all 'lib'
 require 'pry'
 
 class Board
   attr_accessor :cells
       
   def initialize
-     #@cells = (9, " ") 
+     @cells = Array.new(9, " ") 
   end     
    
   def reset!
     @cells = Array.new(9, " ")
+    #binding.pry 
   end
-#cells.[] (X, X, X, X, O, O, X, O, O)
-
-    def display 
-      #binding.pry 
+  # The :: is a unary operator that allows: constants, 
+  # nstance methods and class methods defined within a 
+  # class or module, to be accessed from anywhere 
+  #   outside the class or module. Remember in Ruby, 
+  #   classes and methods may be considered constants too.
+    
+    def display  
       @cells = [X, X, X, X, O, O, X, O, O]
      
      
