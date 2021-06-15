@@ -16,8 +16,8 @@ class Board
   end
   
     def display
-      index = 0  
-      cells = [X, X, X, X, O, O, X, O, O]
+      index = 0..9
+      cells = ["X", "X", "X", "X", "O", "O", "X", "O", "O"]
         cells.each do |entry|
           cells[index] = entry 
           index+=1
@@ -32,4 +32,4 @@ class Board
 
     def position_taken
     end  
-end 
+end
