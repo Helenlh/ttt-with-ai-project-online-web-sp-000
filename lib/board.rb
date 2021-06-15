@@ -5,10 +5,11 @@ require_all 'lib'
 require 'pry'
 
 class Board
-  attr_accessor :cells
+  attr_accessor :cells, :counter
       
   def initialize
      @cells = Array.new(9, " ") 
+     @counter = 0
   end     
    
   def reset!
@@ -32,18 +33,26 @@ class Board
   end 
   end 
 
-    def position(board)
-      number = 0
-      puts "Please enter a number: " 
-      number = $stdin.gets.chomp 
-      puts "You entered #{number}"
-      number.to_i
-      binding.pry 
-      puts cells[number]  
+    def position(input)
+      index = input.to_i - 1
+      @counter +=1
+      cells[index]
+      end
+
+    def full?
+      arr = []
+      cells.each do |entry|
+        if entry.include?(" ")
+          arr << entry 
+        end
+      end
+      if arr.empty?
+        true  
+      else false   
     end 
-    
-      #   def position_taken?(array_index)
-    #     board[array_index] != " " 
-    # end 
-    #end  
+end 
+
+def turn_count
+  @counter 
+  end 
 end
