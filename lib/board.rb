@@ -13,17 +13,14 @@ class Board
    
   def reset!
     @cells = Array.new(9, " ")
-    #binding.pry 
   end
-  # The :: is a unary operator that allows: constants, 
-  # nstance methods and class methods defined within a 
-  # class or module, to be accessed from anywhere 
-  #   outside the class or module. Remember in Ruby, 
-  #   classes and methods may be considered constants too.
-    
-    def display  
-      @cells = [X, X, X, X, O, O, X, O, O]
-     
+  
+    def display
+      index = 0  
+      cells = [X, X, X, X, O, O, X, O, O]
+        cells.each do |entry|
+          cells[index] = entry 
+          index+=1
      
       puts " #{cells[0]} | #{cells[1]} | #{cells[2]} "
       puts "-----------"
@@ -31,7 +28,8 @@ class Board
       puts "-----------"
       puts " #{cells[6]} | #{cells[7]} | #{cells[8]} "
     end 
+  end 
 
     def position_taken
-  end  
+    end  
 end 
