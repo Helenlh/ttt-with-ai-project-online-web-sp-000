@@ -14,14 +14,16 @@ class Board
   def reset!
     @cells = Array.new(9, " ")
   end
+ 
+ 
   
     def display
-      index = 0..9
+      #index = 0 
+      binding.pry
       cells = ["X", "X", "X", "X", "O", "O", "X", "O", "O"]
-        cells.each do |entry|
-          cells[index] = entry 
-          index+=1
-     
+        while index < 9
+          cells.each do |entry|  
+          #index = index +1
       puts " #{cells[0]} | #{cells[1]} | #{cells[2]} "
       puts "-----------"
       puts " #{cells[3]} | #{cells[4]} | #{cells[5]} "
