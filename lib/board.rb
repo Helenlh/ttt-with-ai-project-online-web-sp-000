@@ -19,9 +19,7 @@ class Board
   
     def display
       index = 0 
-      #binding.pry
-      cells = ["X", "X", "X", "X", "O", "O", "X", "O", "O"]
-        while index < 9
+       while index < 9
           cells.each_with_index do |entry|  
             puts entry[index] 
           index = index +1
@@ -34,6 +32,18 @@ class Board
   end 
   end 
 
-    def position_taken
-    end  
+    def position(board)
+      number = 0
+      puts "Please enter a number: " 
+      number = $stdin.gets.chomp 
+      puts "You entered #{number}"
+      number.to_i
+      binding.pry 
+      puts cells[number]  
+    end 
+    
+      #   def position_taken?(array_index)
+    #     board[array_index] != " " 
+    # end 
+    #end  
 end
