@@ -35,7 +35,6 @@ class Board
 
     def position(input)
       index = input.to_i - 1
-      @counter +=1
       cells[index]
       end
 
@@ -48,11 +47,29 @@ class Board
       end
       if arr.empty?
         true  
-      else false   
+      else 
+        false   
     end 
 end 
 
 def turn_count
-  @counter 
+  c = 0
+  cells.each do |entry| 
+    if entry != " " 
+      c +=1
   end 
+end 
+c
+end 
+
+def taken?(index)
+  cells.each do |entry|   
+    if entry == "X" || "O"
+      entry[index] == true
+      elsif 
+        entry == " "
+        entry[index] == false
+    end 
+  end
+end 
 end
