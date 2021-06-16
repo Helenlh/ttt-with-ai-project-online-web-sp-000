@@ -63,7 +63,7 @@ c
 end 
 
 def taken?(index)
-  indexes = index.to_i-1
+  indexes = index.to_i-1 
     if (cells[indexes].include?("X") || cells[indexes].include?("O"))
         true 
       elsif 
@@ -73,16 +73,17 @@ def taken?(index)
   end
 
   def valid_move?(user_input)
+    new_value = user_input.to_i
+    new_value.between?(1,9) && Board.taken?(indexes) == true 
+    binding.pry 
+    true 
     #it 'returns true for user input between 1-9 that is not taken' do
-      #board.cells = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
-      choice = user_input.to_i
-      binding.pry
-      if choice.include?(1..9) && Board.taken? == false 
-        true 
-      end 
-    end 
-
-  def update
+    #board.cells = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
+      end  
+      #undefined method `valid_move?' for Board:Class
+  
+  
+      def update
     #it 'updates the cells in the board with the player token according to the input' do
     end 
 end 
