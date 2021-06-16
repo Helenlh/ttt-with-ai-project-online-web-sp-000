@@ -63,21 +63,12 @@ c
 end 
 
 def taken?(index)
-  cells.each do |entre|   
-    if index.include?("X") || "O"
-    #if entre.include?("X") || "O" 
-        #Board>)> entre.include?("X") || "O"
-        #=> true
+  indexes = index.to_i
+    if cells[indexes].include?("X") || ("O")
         true 
-        #entre == true 
-        #Board[index] == true 
       elsif 
-        index.include?(" ")
-        binding.pry
+        cells[indexes].include?(" ")
         false 
-        #entre == false 
-        #Board[index] == false 
-    end 
+      end 
   end
 end 
-end
