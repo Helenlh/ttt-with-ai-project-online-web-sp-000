@@ -74,14 +74,10 @@ def taken?(index)
 
   def valid_move?(user_input)
     new_value = user_input.to_i
-    new_value.between?(1,9) && Board.taken?(indexes) == true 
-    binding.pry 
+    new_value.between?(1,9) && !Board.taken?(index) 
     true 
-    #it 'returns true for user input between 1-9 that is not taken' do
-    #board.cells = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
       end  
-      #undefined method `valid_move?' for Board:Class
-  
+     
   
       def update
     #it 'updates the cells in the board with the player token according to the input' do
