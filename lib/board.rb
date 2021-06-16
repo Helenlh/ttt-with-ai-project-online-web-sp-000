@@ -65,7 +65,6 @@ end
 def taken?(index)
   indexes = index.to_i-1
     if (cells[indexes].include?("X") || cells[indexes].include?("O"))
-      #binding.pry 
         true 
       elsif 
         cells[indexes].include?(" ")
