@@ -63,12 +63,20 @@ c
 end 
 
 def taken?(index)
-  cells.each do |entry|   
-    if entry == "X" || "O"
-      entry[index] == true
+  cells.each do |entre|   
+    if index.include?("X") || "O"
+    #if entre.include?("X") || "O" 
+        #Board>)> entre.include?("X") || "O"
+        #=> true
+        true 
+        #entre == true 
+        #Board[index] == true 
       elsif 
-        entry == " "
-        entry[index] == false
+        index.include?(" ")
+        binding.pry
+        false 
+        #entre == false 
+        #Board[index] == false 
     end 
   end
 end 
