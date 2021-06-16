@@ -63,12 +63,28 @@ c
 end 
 
 def taken?(index)
-  indexes = index.to_i
-    if cells[indexes].include?("X") || ("O")
+  indexes = index.to_i-1
+    if (cells[indexes].include?("X") || cells[indexes].include?("O"))
+      #binding.pry 
         true 
       elsif 
         cells[indexes].include?(" ")
         false 
       end 
   end
+
+  def valid_move?
+    #it 'returns true for user input between 1-9 that is not taken' do
+      board.cells = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
+
+
+  end 
+
+  def update
+    #it 'updates the cells in the board with the player token according to the input' do
+
+  end 
+
+
+
 end 
